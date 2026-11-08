@@ -20,7 +20,7 @@ A simple todo application built to practice SQL with PHP and MySQL. This is a le
 
 **This code is for practice only and is not ready for production.** It may contain security vulnerabilities and should not be deployed publicly or used with sensitive data.
 
-Known limitations include SQL injection risks, missing CSRF protection, no authentication or access controls, and hardcoded local database credentials. No intentional backdoors are known, but this project has not undergone a full security audit.
+Task creation, updates, and deletion use prepared statements. Known limitations include missing CSRF protection, no authentication or access controls, and hardcoded local database credentials. No intentional backdoors are known, but this project has not undergone a full security audit.
 
 ## Local setup
 

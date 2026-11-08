@@ -129,12 +129,20 @@ $edit_id = isset($_GET["edit"]) ? (int) $_GET["edit"] : 0;
                                             Cancel
                                         </a>
                                     <?php else: ?>
-                                        <a
-                                            href="handlers/delete-task.php?id=<?php echo $task_id; ?>"
-                                            class="btn btn-danger"
+                                        <form
+                                            action="handlers/delete-task.php"
+                                            method="POST"
+                                            class="d-inline"
                                         >
-                                            <i class="fa-solid fa-trash-can"></i>
-                                        </a>
+                                            <input
+                                                type="hidden"
+                                                name="id"
+                                                value="<?php echo $task_id; ?>"
+                                            >
+                                            <button type="submit" class="btn btn-danger" aria-label="Delete task">
+                                                <i class="fa-solid fa-trash-can"></i>
+                                            </button>
+                                        </form>
 
                                         <a
                                             href="index.php?edit=<?php echo $task_id; ?>"
